@@ -1,39 +1,36 @@
-Concert Attendance Analysis
-Overview
-This project analyzes personal concert attendance data to explore trends across artists, venues, and time. The goal was to practice data cleaning, aggregation, and visualization using Python while answering clear, real-world analytical questions.
-The dataset was originally stored in a SQL table and exported to CSV to allow for reproducible, recruiter-friendly analysis without requiring database setup.
+# Concert Attendance Analysis
 
-Questions Explored
-How many concerts were attended for each artist?
-How many concerts were attended at each venue?
-How has the number of concerts attended changed over time?
-Are there noticeable trends in concert attendance by year?
+## Overview
 
-Data Cleaning
-The following steps were performed to prepare the data for analysis:
-Standardized column names (lowercase, trimmed whitespace)
-Converted date strings into proper datetime format
-Removed rows with invalid or missing dates
-Verified there were no missing values in key columns (artist, venue, date)
-These steps ensured accurate grouping and time-based analysis.
+A personal data analysis project exploring concert attendance patterns across artists, venues, and years. The project combines a small SQL-based data collection exercise with Python data cleaning, aggregation, and visualization.
 
-Analysis & Visualizations
-The analysis includes:
-Bar charts showing:
-Number of concerts attended per artist
-Number of concerts attended per venue
-Line and bar charts showing:
-Number of concerts attended per year
-These visualizations make it easy to identify attendance patterns and compare trends over time.
+## Questions explored
 
-Tools Used
-Python
-Pandas (data cleaning & aggregation)
-Matplotlib (visualization)
-Jupyter Notebook
-SQL (initial data storage; schema included for reference)
+- Which artists appear most frequently in the attendance records?
+- Which venues appear most frequently?
+- How does the number of recorded concerts vary by year?
 
-Key Takeaways
-Concert attendance varied significantly by artist and venue
-Certain years showed higher attendance, indicating periods of increased concert activity
-Time-based aggregation was effective in identifying attendance trends
+## Data
+
+The notebook analyzes a personal attendance dataset with artist, venue, and date fields. The records span multiple years, including 2025. The data was initially stored in a SQL table and exported to CSV for analysis.
+
+## Methods
+
+1. Load the exported records into pandas.
+2. Standardize column names and parse the date field.
+3. Exclude records whose dates could not be parsed.
+4. Aggregate attendance counts by artist, venue, and year.
+5. Use Matplotlib to create bar charts and a time-series plot.
+
+## Tools
+
+- SQL
+- Python
+- pandas
+- Matplotlib
+- Jupyter Notebook
+
+## Limitations and next steps
+
+This is a personal dataset, not a representative sample of concert attendance generally. The notebook also encounters inconsistent date formats and at least one invalid date value, which is excluded during date cleaning. A future revision could standardize date formats at the data-entry stage, document the SQL schema, and include a compact summary table alongside the visualizations.
+
